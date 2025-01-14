@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foto Tanaman</title>
+</head>
+<body>
+  <h1>Foto Tanaman</h1>
+  
+  <!-- Menambahkan Gambar -->
+  <img src="assets/images/tanaman.jpg" alt="Tanaman" width="300">
+
+  <p id="plantCount">Jumlah tanaman: 1</p>
+
+  <!-- Elemen untuk Menampilkan Daftar Tanaman -->
+  <ul id="daftarTanaman"></ul>
+
+  <script src="src/fotoTanaman.js"></script>
+  <script>
+    // Menambahkan tanaman dan memperbarui tampilan
+    tambahFoto('Cactus', 'assets/images/tanaman.jpg');
+    
+    // Contoh penggunaan fungsi countPlantsInPhoto
+    const plantsInPhoto = ['plant', 'plant', 'plant'];  // Misalnya ada 3 tanaman di foto
+    const count = countPlantsInPhoto(plantsInPhoto);
+
+    // Menampilkan jumlah tanaman di halaman
+    document.getElementById('plantCount').textContent = `Jumlah tanaman: ${count}`;
+  </script>
+</body>
+</html>
